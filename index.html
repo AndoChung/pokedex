@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Pokedex</title>
 </head>
 <body>
     <div id="page">
@@ -15,17 +16,74 @@
                 <section class="search-section">
                     <div id="search-bar">
                         <input type="text">
-                        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button>GO<i class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
                     <div id="pokemon-list-container">
                         <ol id="pokemon-list">
-
+                            
                         </ol>
                     </div>
                 </section>
                 <section id="pokemon-information-section">
-                    <div>
-                        <span>#001</span>
+                    <div id="pokemon-pokedex-entry-number-container">
+                        <span id="pokemon-id"></span>
+                    </div>
+                    <div id="pokemon-overall-information">
+                        <div id="pokemon-overall-information-text">
+                            <div id="pokemon-type-name-container">
+                                <img id="pokemon-type-image">
+                                <div id="pokemon-type-name-div">
+                                    <span id="pokemon-type"></span>
+                                    <h1 id="pokemon-name"></h1>
+                                </div>
+                            </div>
+                            <div id="pokemon-height-weight-container">
+                                <div id="pokemon-height-container">
+                                    <h3>Height</h3>
+                                    <span id="pokemon-height"></span>
+                                </div>
+                                <div id="pokemon-weight-container">
+                                    <h3>Weight</h3>
+                                    <span id="pokemon-weight"></span>
+                                </div>
+                                <div id="pokemon-abilities-container">
+                                    <h3>Abilities</h3>
+                                    <span id="pokemon-ability"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="pokemon-image-container">
+                            <img id="pokemon-image">
+                        </div>
+                    </div>
+                </section>
+                <section id="pokemon-stats-section">
+                    <h2>Base Stats</h2>
+                    <div id="stats-bar-graph-div">
+                        <div>
+                            <h4>HP</h4>
+                            <span id="hp-stat"></span>
+                        </div>
+                        <div>
+                            <h4>Attack</h4>
+                            <span id="attack-stat"></span>
+                        </div>
+                        <div>
+                            <h4>Defense</h4>
+                            <span id="defense-stat"></span>
+                        </div>
+                        <div>
+                            <h4>Special Attack</h4>
+                            <span id="sp-attack-stat"></span>
+                        </div>
+                        <div>
+                            <h4>Special Defense</h4>
+                            <span id="sp-defense-stat"></span>
+                        </div>
+                        <div>
+                            <h4>Speed</h4>
+                            <span id="speed-stat"></span>
+                        </div>
                     </div>
                 </section>
             </div>
