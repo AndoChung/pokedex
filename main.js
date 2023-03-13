@@ -7,16 +7,12 @@ window.onload = async function() {
     for (let i = 1; i <= pokemonCount; i++) {
         await getPokemon(i);
     }
-    for (let i in pokedex) {
-        let listItem = document.createElement("li");
-        listItem.innerText = i;
-        pokemonList.appendChild(listItem)
-    }
+    // for (let i in pokedex) {
+    //     let listItem = document.createElement("li");
+    //     listItem.innerText = i;
+    //     pokemonList.appendChild(listItem)
+    // }
 }
-
-
-
-
 
 async function getPokemon(num) {
     const url = 'https://pokeapi.co/api/v2/pokemon/' + num.toString();
@@ -66,7 +62,6 @@ async function getPokemon(num) {
     }
 }
 
-
 console.log(pokedex);
 
 let input = document.querySelector("input")
@@ -77,17 +72,15 @@ let pokeName = document.getElementById("pokemon-name");
 let height = document.getElementById("pokemon-height");
 let weight = document.getElementById("pokemon-weight");
 let ability = document.getElementById("pokemon-ability");
-
-
 let image = document.getElementById("pokemon-image")
-
 let hp = document.getElementById("hp-stat");
 let attack = document.getElementById("attack-stat");
 let defense = document.getElementById("defense-stat");
 let spAttack = document.getElementById("sp-attack-stat");
 let spDefense = document.getElementById("sp-defense-stat");
 let speed = document.getElementById("speed-stat");
-
+let type1 = document.getElementById("pokemon-type");
+let typeImage = document.getElementById("pokemon-type-image");
 
 button.addEventListener("click" , () => {
     currentPokemon = input.value.toLowerCase();
@@ -95,7 +88,13 @@ button.addEventListener("click" , () => {
     weight.innerText = pokedex[currentPokemon]["weight"];
     ability.innerText = pokedex[currentPokemon]["ability"][0].toUpperCase() + pokedex[currentPokemon]["ability"].slice(1);
     id.innerText = pokedex[currentPokemon]["id"];
-
+    if (Number(id.innerText) < 100) {
+        id.innerText = "#0" + id.innerText.toString();
+    } else if (Number(id.innerText) < 10) {
+        id.innerText = "#00" + id.innerText.toString();
+    } else {
+        id.innerText = "#" + id.innerText.toString();
+    }
     pokeName.innerText = currentPokemon[0].toUpperCase() + currentPokemon.slice(1);
 
     image.src = pokedex[currentPokemon]["image"];
@@ -106,6 +105,9 @@ button.addEventListener("click" , () => {
     spAttack.innerText = pokedex[currentPokemon]["spAttack"];
     spDefense.innerText = pokedex[currentPokemon]["spDefense"];
     speed.innerText = pokedex[currentPokemon]["speed"];
+    type1.innerText = pokedex[currentPokemon]["type1"];
+
+    typeImage.src = `imgs/type-${type1.innerText}.png`
 })
 
 
