@@ -1,0 +1,92 @@
+body {
+    
+}
+
+#page-contents {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#pokedex {
+    max-width: 1000px;
+    width: 1000px;
+}
+
+/*********************************************
+* Search Section
+**********************************************/
+
+
+
+
+
+
+/*********************************************
+* Pokemon Information Section
+**********************************************/
+.pokemon-pokedex-entry-number-container {
+    
+}
+
+
+
+#pokemon-overall-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pokemon-overall-information-text {
+    width: 900px;
+}
+
+#pokemon-type-name-container {
+    display:flex;
+    flex-direction: row;
+}
+
+#pokemon-type-image {
+    height: 100px;
+    width: 100px;
+}
+
+#pokemon-type-name-div {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 0;
+}
+
+#pokemon-image-container {
+
+}
+
+#pokemon-image {
+    width: 400px;
+    height: 400px;
+}
+
+#pokemon-height-weight-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.information-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h3 {
+    margin: 0;
+}
+
+
+
+/*********************************************
+* Pokemon Stats Section
+**********************************************/
