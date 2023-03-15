@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://use.fontawesome.com/05f7da3ac0.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
     <title>Pokedex</title>
 </head>
 <body>
     <div id="page">
         <div id="page-contents">
-            <div id="left-arrow"></div>
+            <div id="left-arrow-div" class="arrow-div">
+                <div class="arrow left"></div>
+            </div>
             <div id="pokedex">
                 <section class="search-section">
                     <div id="search-bar">
                         <input type="text">
-                        <button>GO<i class="fa-solid fa-magnifying-glass"></i></button>
+                        <button><i class="fa fa-search" aria-hidden="true"></i></button>
                     </div>
                     <div id="pokemon-list-container">
-                        <ol id="pokemon-list">
-                            
-                        </ol>
+                        <div id="pokemon-list">
+                            <div><li id="3-previous-pokemon"></li></div>
+                            <div><li id="2-previous-pokemon"></li></div>
+                            <div><li id="1-previous-pokemon"></li></div>
+                            <div><li id="current-pokemon"></li></div>
+                            <div><li id="1-next-pokemon"></li></div>
+                            <div><li id="2-next-pokemon"></li></div>
+                            <div><li id="3-next-pokemon"></li></div>
+                        </div>
                     </div>
                 </section>
                 <section id="pokemon-information-section">
@@ -60,34 +70,66 @@
                 <section id="pokemon-stats-section">
                     <h2>Base Stats</h2>
                     <div id="stats-bar-graph-div">
-                        <div>
-                            <h4>HP</h4>
-                            <span id="hp-stat"></span>
+                        <div class="stats">
+                            <div class="stat-name-graph">
+                                <h4>HP</h4>
+                                <div class="bar-graph-container">
+                                    <div id="hp-bar-graph" class="bar-graph"></div>
+                                </div>
+                            </div>
+                            <span id="hp-stat" class="numerical-stat"></span>
                         </div>
-                        <div>
-                            <h4>Attack</h4>
-                            <span id="attack-stat"></span>
+                        <div class="stats">
+                            <div class="stat-name-graph">
+                                <h4>Attack</h4>
+                                <div class="bar-graph-container">
+                                    <div id="attack-bar-graph"  class="bar-graph"></div>
+                                </div>
+                            </div>
+                            <span id="attack-stat" class="numerical-stat"></span>
                         </div>
-                        <div>
-                            <h4>Defense</h4>
-                            <span id="defense-stat"></span>
+                        <div class="stats">
+                            <div class="stat-name-graph">
+                                <h4>Defense</h4>
+                                <div class="bar-graph-container">
+                                    <div id="defense-bar-graph"  class="bar-graph"></div>
+                                </div>
+                            </div>
+                            <span id="defense-stat" class="numerical-stat"></span>
                         </div>
-                        <div>
-                            <h4>Special Attack</h4>
-                            <span id="sp-attack-stat"></span>
+                        <div class="stats">
+                            <div class="stat-name-graph">
+                                <h4>Special Attack</h4>
+                                <div class="bar-graph-container">
+                                    <div id="sp-attack-bar-graph"  class="bar-graph"></div>
+                                </div>
+                            </div>
+                            <span id="sp-attack-stat"  class="numerical-stat"></span>
                         </div>
-                        <div>
-                            <h4>Special Defense</h4>
-                            <span id="sp-defense-stat"></span>
+                        <div class="stats">
+                            <div class="stat-name-graph">
+                                <h4>Special Defense</h4>
+                                <div class="bar-graph-container">
+                                    <div id="sp-defense-bar-graph"  class="bar-graph"></div>
+                                </div>
+                            </div>
+                            <span id="sp-defense-stat"  class="numerical-stat"></span>
                         </div>
-                        <div>
-                            <h4>Speed</h4>
-                            <span id="speed-stat"></span>
+                        <div class="stats">
+                            <div class="stat-name-graph">
+                                <h4>Speed</h4>
+                                <div class="bar-graph-container">
+                                    <div id="speed-bar-graph"  class="bar-graph"></div>
+                                </div>
+                            </div>
+                            <span id="speed-stat"  class="numerical-stat"></span>
                         </div>
                     </div>
                 </section>
             </div>
-            <div id="right-arrow"></div>
+            <div id="right-arrow-div" class="arrow-div">
+                <div class="arrow right"></div>
+            </div>
         </div>
     </div>
     <script src="main.js"></script>
