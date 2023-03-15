@@ -1,14 +1,31 @@
 const pokemonCount = 151;
 let pokedex = {};
 
+let hpBar = document.getElementById("hp-bar-graph");
+let attackBar = document.getElementById("attack-bar-graph");
+let defenseBar = document.getElementById("defense-bar-graph");
+let spAttackBar = document.getElementById("sp-attack-bar-graph");
+let spDefenseBar = document.getElementById("sp-defense-bar-graph");
+let speedBar = document.getElementById("speed-bar-graph");
+
+const hpMax = 250;
+const attackMax = 134;
+const defenseMax = 180;
+const spAttackMax = 154;
+const spDefenseMax = 125;
+const speedMax = 150;
 let pokemonList = document.getElementById("pokemon-list")
 
 window.onload = async function() {
+    hpBar.style.width = (45 * 600/hpMax).toString() + "px";
+    attackBar.style.width = (49 * 600/attackMax).toString() + "px";
+    defenseBar.style.width = (49 * 600/defenseMax).toString() + "px";
+    spAttackBar.style.width = (49 * 600/spAttackMax).toString() + "px";
+    spDefenseBar.style.width = (49 * 600/spDefenseMax).toString() + "px";
+    speedBar.style.width = (49 * 600/speedMax).toString() + "px";
     for (let i = 1; i <= pokemonCount; i++) {
         await getPokemon(i);
     }
-
-    generatePokemon("bulbasaur")
 }
 
 async function getPokemon(num) {
@@ -54,7 +71,7 @@ async function getPokemon(num) {
         "type1": type1,
         "image": image
     };
-
+    console.log(image)
     pokedex[id] = {
         "name": name,
         "id": id,
@@ -97,19 +114,7 @@ let speed = document.getElementById("speed-stat");
 let type1 = document.getElementById("pokemon-type");
 let typeImage = document.getElementById("pokemon-type-image");
 
-let hpBar = document.getElementById("hp-bar-graph");
-let attackBar = document.getElementById("attack-bar-graph");
-let defenseBar = document.getElementById("defense-bar-graph");
-let spAttackBar = document.getElementById("sp-attack-bar-graph");
-let spDefenseBar = document.getElementById("sp-defense-bar-graph");
-let speedBar = document.getElementById("speed-bar-graph");
 
-const hpMax = 250;
-const attackMax = 134;
-const defenseMax = 180;
-const spAttackMax = 154;
-const spDefenseMax = 125;
-const speedMax = 150;
 
 let previousPokemon3 = document.getElementById("3-previous-pokemon");
 let previousPokemon2 = document.getElementById("2-previous-pokemon");
