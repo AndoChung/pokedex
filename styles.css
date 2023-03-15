@@ -1,17 +1,68 @@
 body {
-    
+    min-height: 100vh;
+    height: 100vh;
+    font-family: "Outfit";
+    color: white;
+    margin: 0;
+    background-image: linear-gradient(180deg, rgb(133, 194, 138), rgb(31, 70, 25));
+}
+
+#page {
+    height: 100%;
 }
 
 #page-contents {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+    height: 100%;
 }
 
 #pokedex {
-    max-width: 1000px;
     width: 1000px;
+    display: flex;
+    flex-direction: column;
 }
+
+#left-arrow-div {
+    width: 100px;
+    height: 100%;
+}
+
+#right-arrow-div {
+    width: 100px;
+    height: 100%;
+}
+
+.arrow-div:hover {
+    cursor: pointer;
+}
+
+.arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    height:10px;
+    width: 10px;
+}
+
+.right {
+    top: 50vh;
+    right: 50px;
+    position: absolute;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+  
+.left {
+    top: 50vh;
+    left: 50px;
+    position: absolute;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
 
 /*********************************************
 * Search Section
@@ -19,19 +70,101 @@ body {
 
 
 
+.search-section {
+    z-index:10;
+    height: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#search-bar {
+    width: 400px;
+    position: relative;
+}
+
+input {
+    position: absolute;
+    width: 300px;
+    height: 30px;
+    margin: 0;
+    padding: 0 0 0 20px;
+    border: none;
+    font-family: "Outfit";
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 290px; 
+    top: 5px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: white;
+}
+
+
+#pokemon-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none
+}
+
+#pokemon-list div {
+    width: 125px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#pokemon-list li {
+    text-align: center;
+}
+
+#pokemon-list li:hover {
+    cursor: pointer;
+}
+
 
 
 
 /*********************************************
 * Pokemon Information Section
 **********************************************/
-.pokemon-pokedex-entry-number-container {
-    
+#pokemon-information-section {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 600px;
 }
 
 
+#pokemon-pokedex-entry-number-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+#pokemon-id {
+    font-size: 350px;
+    font-weight: bold;
+    line-height: .8
+}
 
 #pokemon-overall-information {
+    width: 100%;
+    position: absolute;
+    top: 130px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,12 +172,13 @@ body {
 }
 
 #pokemon-overall-information-text {
-    width: 900px;
+    width: 400px;
 }
 
 #pokemon-type-name-container {
     display:flex;
     flex-direction: row;
+    margin-bottom: 20px;
 }
 
 #pokemon-type-image {
@@ -55,19 +189,35 @@ body {
 #pokemon-type-name-div {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin: 0 0 0 15px;
+}
+
+#pokemon-type {
+    font-size: 26px;
+    line-height: 1;
 }
 
 h1 {
     margin: 0;
+    font-size: 52px;
+    line-height: 1;
 }
+
+#pokemon-height-weight-container {
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+}
+
 
 #pokemon-image-container {
 
 }
 
 #pokemon-image {
-    width: 400px;
-    height: 400px;
+    width: 500px;
+    height: 500px;
 }
 
 #pokemon-height-weight-container {
@@ -90,3 +240,55 @@ h3 {
 /*********************************************
 * Pokemon Stats Section
 **********************************************/
+
+#pokemon-stats-section {
+    height: 350px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h2 {
+    width: 20%;
+}
+
+#stats-bar-graph-div {
+    width: 80%;
+}
+
+.stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.stats h4 {
+    width: 140px;
+    margin: 15px 0;
+
+}
+
+.stat-name-graph {
+    display:flex;
+    flex-direction: row;
+    width: 95%;
+}
+
+.bar-graph-container {
+    height: 50px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.numerical-stat {
+    width: 5%;
+    margin: 15px 0;
+}
+
+.bar-graph {
+    height: 35px;
+    background-color: white;
+    border-radius: 8px;
+}
