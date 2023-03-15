@@ -71,7 +71,6 @@ async function getPokemon(num) {
         "type1": type1,
         "image": image
     };
-    console.log(image)
     pokedex[id] = {
         "name": name,
         "id": id,
