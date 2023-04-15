@@ -170,7 +170,7 @@ nextPokemon3.addEventListener("click", () => {
 
 
 function generatePokemon(currentPokemon) {
-    heightDecimeter = pokedex[currentPokemon]["height"];
+    let heightDecimeter = pokedex[currentPokemon]["height"];
     height.innerText = (heightDecimeter / 10).toString() + " m";
     
     weightHectogram = pokedex[currentPokemon]["weight"];
@@ -199,23 +199,27 @@ function generatePokemon(currentPokemon) {
 
     typeImage.src = `imgs/type-${type1.innerText}.png`
 
-    let hpBarWidth = ((hp.innerText/hpMax) * 600)
-    hpBar.style.width = hpBarWidth.toString() + "px";
 
-    let attackBarWidth = ((attack.innerText/attackMax) * 600)
+
+
+
+    let hpBarWidth = ((hp.innerText/hpMax) * 100)
+    hpBar.style.width = hpBarWidth.toString() + "%";
+
+    let attackBarWidth = ((attack.innerText/attackMax) * 100)
     attackBar.style.width = attackBarWidth.toString() + "px";
 
-    let defenseBarWidth = ((defense.innerText/defenseMax) * 600)
-    defenseBar.style.width = defenseBarWidth.toString() + "px";
+    let defenseBarWidth = ((defense.innerText/defenseMax) * 100)
+    defenseBar.style.width = defenseBarWidth.toString() + "%";
 
-    let spAttackBarWidth = ((spAttack.innerText/spAttackMax) * 600)
-    spAttackBar.style.width = spAttackBarWidth.toString() + "px";
+    let spAttackBarWidth = ((spAttack.innerText/spAttackMax) * 100)
+    spAttackBar.style.width = spAttackBarWidth.toString() + "%";
 
-    let spDefenseBarWidth = ((spDefense.innerText/spDefenseMax) * 600)
-    spDefenseBar.style.width = spDefenseBarWidth.toString() + "px";
+    let spDefenseBarWidth = ((spDefense.innerText/spDefenseMax) * 100)
+    spDefenseBar.style.width = spDefenseBarWidth.toString() + "%";
 
-    let speedBarWidth = ((speed.innerText/speedMax) * 600)
-    speedBar.style.width = speedBarWidth.toString() + "px";
+    let speedBarWidth = ((speed.innerText/speedMax) * 100)
+    speedBar.style.width = speedBarWidth.toString() + "%";
 
     switch (type1.innerText) {
         case("BUG"):
