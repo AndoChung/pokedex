@@ -32,7 +32,6 @@ async function getPokemon(num) {
     const url = 'https://pokeapi.co/api/v2/pokemon/' + num.toString();
     const response = await fetch(url);
     const pokemon = await response.json();
-
     // if (!response.ok) {
     //     throw new Error(`HTTP error! status: ${pokemon.status}`)
     // }
@@ -207,7 +206,7 @@ function generatePokemon(currentPokemon) {
     hpBar.style.width = hpBarWidth.toString() + "%";
 
     let attackBarWidth = ((attack.innerText/attackMax) * 100)
-    attackBar.style.width = attackBarWidth.toString() + "px";
+    attackBar.style.width = attackBarWidth.toString() + "%";
 
     let defenseBarWidth = ((defense.innerText/defenseMax) * 100)
     defenseBar.style.width = defenseBarWidth.toString() + "%";
